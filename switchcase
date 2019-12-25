@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int dyil,yil,yas;
+    printf("Suan bulundugunuz yili giriniz: "); scanf("%d",&yil); printf("\n");
+    printf("Ogrencinin dogum yilini giriniz: "); scanf("%d",&dyil); printf("\n");
+
+    switch(yil-dyil)
+    {
+        case 7: printf("Bu ogrenci 7 yasindadir ve 1. sinif ogrencisidir."); break;
+        case 8: printf("Bu ogrenci 8 yasindadir ve 2. sinif ogrencisidir."); break;
+        case 9: printf("Bu ogrenci 9 yasindadir ve 3. sinif ogrencisidir."); break;
+        case 10: printf("Bu ogrenci 10 yasindadir ve 4. sinif ogrencisidir."); break;
+        default: printf("Ogrenci ilkokulda okumamaktadir"); break;
+    }
+
+
+
+    return 0;
+}
