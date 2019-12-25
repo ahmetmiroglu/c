@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int sayi,fktr=1;
+
+    printf("Faktoryeli alinicak sayiyi giriniz: "); scanf("%d",&sayi);
+
+    while (sayi!=0)
+    {
+        fktr=fktr*sayi;
+
+        sayi--;
+    }
+
+    printf("Sayinin faktoryeli: %d",fktr);
+
+    return 0;
+}
