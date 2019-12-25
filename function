@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+float toplama(float sayi1,float sayi2)
+{
+    float sonuc;
+    sonuc=sayi1+sayi2;
+    printf("Sonuc: %.2f",sonuc);
+}
+float cikarma(float sayi1,float sayi2)
+{
+    float sonuc;
+    sonuc=sayi1-sayi2;
+    printf("Sonuc: %.2f",sonuc);
+}
+float carpma(float sayi1,float sayi2)
+{
+    float sonuc;
+    sonuc=sayi1*sayi2;
+    printf("Sonuc: %.2f",sonuc);
+}
+float bolme(float sayi1,float sayi2)
+{
+    float sonuc;
+    sonuc=sayi1/sayi2;
+    printf("Sonuc: %.2f",sonuc);
+}
+int main()
+{
+    int sayi1,sayi2,islem;
+    printf("Birinci sayiyi giriniz: "); scanf("%d",&sayi1);
+    printf("Ikinci sayiyi giriniz: "); scanf("%d",&sayi2);
+
+    printf("Islem Listesi: \n");
+    printf("        Toplama islemi icin     1'e basiniz\n");
+    printf("        Cikarma islemi icin     2'ye basiniz\n");
+    printf("        Carpma islemi icin      3'e basiniz\n");
+    printf("        Bolme islemi icin       4'e basiniz\n");
+
+    printf("Girilecek islemi seciniz: "); scanf("%d",&islem);
+    switch (islem)
+    {
+        case 1: toplama(sayi1,sayi2); break;
+        case 2: cikarma(sayi1,sayi2); break;
+        case 3: carpma(sayi1,sayi2); break;
+        case 4: bolme(sayi1,sayi2); break;
+        default: printf("Hatali secim yaptiniz."); break;
+    }
+
+    return 0;
+}
