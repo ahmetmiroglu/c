@@ -4,7 +4,7 @@
 int main()
 {
     int gol,tgol=0,ygol,tygol=0,devam,puan=0;
-    for (;;)
+    for (; ;)
     {
         printf("Takimin attigi gol sayisi: "); scanf("%d",&gol);
         printf("Takimin yedigi gol sayisi: "); scanf("%d",&ygol);
