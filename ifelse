@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int sayi;
+    printf("Bir sayi giriniz: "); scanf("%d",&sayi);
+
+    if (sayi>0)
+    {
+        if(sayi%2==0)
+        {
+            printf("%d sayisi cift sayidir.",sayi);
+        }
+        else
+        {
+            printf("%d sayisi tek sayidir.",sayi);
+        }
+    }
+    if (sayi<0)
+    {
+        if(sayi%5==0)
+        {
+            printf("%d sayisi 5'e bolunur.",sayi);
+        }
+        else
+        {
+            printf("%d sayisi 5'e bolunmez.",sayi);
+        }
+    }
+    if (sayi==0)
+    {
+        printf("0 sayisini girdiniz.");
+    }
+
+    return 0;
+}
