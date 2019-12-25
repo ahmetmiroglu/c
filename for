@@ -3,8 +3,8 @@
 
 int main()
 {
-    int i,gol,tgol=0,ygol,tygol=0,devam,puan=0;
-    for (i=0;i<32;i++)
+    int gol,tgol=0,ygol,tygol=0,devam,puan=0;
+    for (;;)
     {
         printf("Takimin attigi gol sayisi: "); scanf("%d",&gol);
         printf("Takimin yedigi gol sayisi: "); scanf("%d",&ygol);
