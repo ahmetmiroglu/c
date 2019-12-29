@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int buyukToplamiBul(int array[],int boyut)
+{
+    int j,k,n,t=0,c=0,tek[10],cift[10],tektop=0,cifttop=0;
+
+    for (j=0;j<boyut;j++)
+    {
+        if (array[j]%2==0)
+        {
+            cift[c]=array[j];
+            cifttop+=array[j];
+            c++;
+        }
+        else if (array[j]%2==1)
+        {
+            tek[t]=array[j];
+            tektop+=array[j];
+            t++;
+        }
+    }
+
+    printf("\nCift sayilar: ");
+    for (k=0;k<c;k++)
+    {
+        printf("%d    ",cift[k]);
+    }
+    printf("\nCift sayilar toplami: %d",cifttop);
+    printf("\nTek sayilar: ");
+    for (n=0;n<t;n++)
+    {
+        printf("%d    ",tek[n]);
+    }
+    printf("\nTek sayilar toplami: %d",tektop);
+
+    if (cifttop>tektop)
+    {
+        return 1;
+    }
+    if (cifttop<tektop)
+    {
+        return 2;
+    }
+    else
+    {
+        return 3;
+    }
+
+}
+int main()
+{
+    int array[10],boyut,i,buyukluk;
+
+    printf("Dizi boyutunu giriniz: "); scanf("%d",&boyut);
+
+    for (i=0;i<boyut;i++)
+    {
+        printf("%d. eleman: ",i+1); scanf("%d",&array[i]);
+    }
+    switch (buyukToplamiBul(array,boyut))
+            {
+                case 1: printf("\n\nCift sayilarin toplami daha buyuktur.");
+                case 2: printf("\n\nTek sayilarin toplami daha buyuktur.");
+                case 3: printf("\n\nTek ve cift sayilarin toplami esittir.");
+            }
+
+    return 0;
+}
